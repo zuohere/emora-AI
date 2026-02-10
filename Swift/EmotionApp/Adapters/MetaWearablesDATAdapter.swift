@@ -84,6 +84,7 @@ public class MetaWearablesDATAdapter: NSObject, VideoProvider, AudioProvider, AV
         guard let data = audioBuffer.mData else { return }
         
         let audioData = Data(bytes: data, count: Int(audioBuffer.mDataByteSize))
+        os_log("音频数据已捕获: %d bytes", log: log, type: .debug, audioData.count)
         onAudioChunk?(audioData)
     }
     
@@ -150,6 +151,7 @@ public class MetaWearablesDATAdapter: NSObject, VideoProvider, AudioProvider, AV
         
         if let cgImage = context.createCGImage(ciImage, from: ciImage.extent) {
             let image = UIImage(cgImage: cgImage)
+            os_log("视频帧已捕获", log: log, type: .debug)
             DispatchQueue.main.async {
                 self.onFrame?(image)
             }

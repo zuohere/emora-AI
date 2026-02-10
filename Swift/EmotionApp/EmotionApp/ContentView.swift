@@ -8,9 +8,16 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 20) {
+            VStack(spacing: 16) {
+                // 摄像头实时预览
+                CameraPreview(manager: manager)
+                    .frame(height: 300)
+                    .cornerRadius(12)
+                    .padding()
+                
                 // 情绪分析视图
                 EmotionAnalysisView()
+                    .frame(maxHeight: 200)
                 
                 Spacer()
                 

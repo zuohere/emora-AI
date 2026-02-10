@@ -41,6 +41,7 @@ public class EmotionCoreManager: ObservableObject {
     @Published public var emotionResult: String = "等待分析..."
     @Published public var emotionScores: [String: Double] = [:]
     @Published public var dominantEmotion: String = "neutral"
+    @Published public var currentFrame: UIImage?
 
     private var cancellables = Set<AnyCancellable>()
 
@@ -131,7 +132,13 @@ public class EmotionCoreManager: ObservableObject {
     // MARK: - internal handlers
     #if canImport(UIKit)
     private func handleFrame(_ image: UIImage) {
-        guard let pixelBuffer = image.toCVPixelBuffer(width: videoWidth, height: videoHeight) else {
+        DispatchQueue.main.async {
+            nonisolated(unsafe) let unsafeSelf = self
+            unsafeSelf.currentFrame = image
+        }
+        
+        // 直接从UIImage转换而不强制调整大小，让编码器处理缩放
+        guard let pixelBuffer = image.toCVPixelBuffer() else {
             os_log("Failed to convert UIImage to CVPixelBuffer", log: log, type: .error)
             return
         }
@@ -209,6 +216,7 @@ public class EmotionCoreManager: ObservableObject {
 
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: payload)
+            os_log("发送视频数据: %d bytes (keyframe: %{public}@)", log: log, type: .debug, data.count, isKeyframe ? "true" : "false")
             wsClient?.send(data: jsonData)
         } catch {
             os_log("Failed to serialize video data: %@", log: log, type: .error, error.localizedDescription)
@@ -223,6 +231,7 @@ public class EmotionCoreManager: ObservableObject {
 
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: payload)
+            os_log("发送音频数据: %d bytes", log: log, type: .debug, data.count)
             wsClient?.send(data: jsonData)
         } catch {
             os_log("Failed to serialize audio data: %@", log: log, type: .error, error.localizedDescription)
@@ -237,6 +246,13 @@ public class EmotionCoreManager: ObservableObject {
 // MARK: - UIImage Extension
 #if canImport(UIKit)
 extension UIImage {
+    // 无参数版本 - 保持原始尺寸
+    func toCVPixelBuffer() -> CVPixelBuffer? {
+        guard let cgImage = self.cgImage else { return nil }
+        return toCVPixelBuffer(width: cgImage.width, height: cgImage.height)
+    }
+    
+    // 有参数版本 - 调整到指定尺寸
     func toCVPixelBuffer(width: Int, height: Int) -> CVPixelBuffer? {
         let attributes: [String: Any] = [
             kCVPixelBufferCGImageCompatibilityKey as String: true,
