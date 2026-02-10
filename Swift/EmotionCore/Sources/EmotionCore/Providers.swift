@@ -1,9 +1,16 @@
 import Foundation
-import UIKit
 import AVFoundation
 
+#if canImport(UIKit)
+import UIKit
+#endif
+
 public protocol VideoProvider: AnyObject {
+    #if canImport(UIKit)
     var onFrame: ((UIImage) -> Void)? { get set }
+    #else
+    var onFrame: ((CVPixelBuffer) -> Void)? { get set }
+    #endif
     func start()
     func stop()
 }

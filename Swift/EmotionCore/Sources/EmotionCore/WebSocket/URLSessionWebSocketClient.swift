@@ -3,6 +3,8 @@ import OSLog
 
 private let log = OSLog(subsystem: "com.emora.emotion", category: "WebSocket")
 
+@available(macOS 10.15, iOS 13.0, *)
+@preconcurrency
 public class URLSessionWebSocketClient: NSObject, WebSocketClient {
     private var webSocket: URLSessionWebSocketTask?
     private var session: URLSession?
@@ -37,22 +39,23 @@ public class URLSessionWebSocketClient: NSObject, WebSocketClient {
             
             self?.webSocket = session.webSocketTask(with: request)
             self?.webSocket?.resume()
-            
+
             self?.isConnected = true
             self?.retryCount = 0
-            
+
+            nonisolated(unsafe) let unsafeSelf = self
             DispatchQueue.main.async {
-                self?.onConnected?()
+                unsafeSelf?.onConnected?()
             }
-            
+
             os_log("WebSocket连接中: %@", log: log, type: .info, url.absoluteString)
-            self?.receiveMessage()
+            unsafeSelf?.receiveMessage()
         }
     }
     
     public func send(data: Data) {
         guard isConnected else {
-            os_log("WebSocket未连接", log: log, type: .warning)
+            os_log("WebSocket未连接", log: log, type: .default)
             return
         }
         
@@ -68,7 +71,7 @@ public class URLSessionWebSocketClient: NSObject, WebSocketClient {
     
     public func send(text: String) {
         guard isConnected else {
-            os_log("WebSocket未连接", log: log, type: .warning)
+            os_log("WebSocket未连接", log: log, type: .default)
             return
         }
         
@@ -94,47 +97,50 @@ public class URLSessionWebSocketClient: NSObject, WebSocketClient {
             os_log("WebSocket已断开连接", log: log, type: .info)
         }
     }
-    
+
     private func receiveMessage() {
         guard isConnected else { return }
-        
+
         webSocket?.receive { [weak self] result in
             switch result {
             case .success(let message):
+                nonisolated(unsafe) let unsafeSelf = self
                 switch message {
                 case .data(let data):
                     DispatchQueue.main.async {
-                        self?.onMessageData?(data)
+                        unsafeSelf?.onMessageData?(data)
                     }
                 case .string(let text):
                     if let data = text.data(using: .utf8) {
                         DispatchQueue.main.async {
-                            self?.onMessageData?(data)
+                            unsafeSelf?.onMessageData?(data)
                         }
                     }
                 @unknown default:
                     break
                 }
-                self?.receiveMessage()
-                
+                unsafeSelf?.receiveMessage()
+
             case .failure(let error):
                 os_log("WebSocket接收失败: %@", log: log, type: .error, error.localizedDescription)
                 self?.isConnected = false
-                
+
+                nonisolated(unsafe) let unsafeSelf3 = self
                 DispatchQueue.main.async {
-                    self?.onDisconnected?(error)
+                    unsafeSelf3?.onDisconnected?(error)
                 }
-                
-                if (self?.retryCount ?? 0) < (self?.maxRetries ?? 5) {
-                    self?.retryCount += 1
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                        self?.receiveMessage()
+
+                nonisolated(unsafe) let unsafeSelf2 = self
+                if (unsafeSelf2?.retryCount ?? 0) < (unsafeSelf2?.maxRetries ?? 5) {
+                    unsafeSelf2?.retryCount += 1
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak unsafeSelf2] in
+                        unsafeSelf2?.receiveMessage()
                     }
                 }
             }
         }
     }
-    
+
     deinit {
         disconnect()
     }

@@ -2,6 +2,7 @@ import Foundation
 import AVFoundation
 import UIKit
 import OSLog
+import EmotionCore
 
 private let log = OSLog(subsystem: "com.emora.emotion", category: "MetaAdapter")
 
@@ -43,7 +44,7 @@ public class MetaWearablesDATAdapter: NSObject, VideoProvider, AudioProvider, AV
         let audioSession = AVAudioSession.sharedInstance()
         
         do {
-            try audioSession.setCategory(.record, options: [.duckOthers, .allowBluetooth])
+            try audioSession.setCategory(.record, options: [.duckOthers, .allowBluetoothHFP])
             try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         } catch {
             os_log("音频会话配置失败: %@", log: log, type: .error, error.localizedDescription)

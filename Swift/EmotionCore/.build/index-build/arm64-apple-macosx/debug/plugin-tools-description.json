@@ -1,0 +1,267 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.EmotionCore-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/EmotionCore.build/sources",
+      "importPath" : "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/EmotionCoreManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/Encoders/AudioEncoder.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/Encoders/H264Encoder.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/Providers.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/WebSocket/URLSessionWebSocketClient.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/EmotionCore.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "EmotionCore",
+      "moduleOutputPath" : "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/Modules/EmotionCore.swiftmodule",
+      "objects" : [
+        "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/EmotionCore.build/EmotionCoreManager.swift.o",
+        "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/EmotionCore.build/AudioEncoder.swift.o",
+        "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/EmotionCore.build/H264Encoder.swift.o",
+        "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/EmotionCore.build/Providers.swift.o",
+        "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/EmotionCore.build/URLSessionWebSocketClient.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx11.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/EmotionCore.build/include/EmotionCore-Swift.h",
+        "-swift-version",
+        "6",
+        "-Xfrontend",
+        "-experimental-lazy-typecheck",
+        "-Xfrontend",
+        "-experimental-skip-all-function-bodies",
+        "-Xfrontend",
+        "-experimental-allow-module-with-compiler-errors",
+        "-Xfrontend",
+        "-empty-abi-descriptor",
+        "-I",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-L",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-plugin-path",
+        "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "emotioncore"
+      ],
+      "outputFileMapPath" : "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/EmotionCore.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/Modules/EmotionCore.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : true,
+      "sources" : [
+        "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/EmotionCoreManager.swift",
+        "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/Encoders/AudioEncoder.swift",
+        "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/Encoders/H264Encoder.swift",
+        "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/Providers.swift",
+        "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/WebSocket/URLSessionWebSocketClient.swift"
+      ],
+      "tempsPath" : "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/EmotionCore.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "EmotionCore" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "EmotionCore",
+      "-package-name",
+      "emotioncore",
+      "-c",
+      "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/EmotionCoreManager.swift",
+      "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/Encoders/AudioEncoder.swift",
+      "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/Encoders/H264Encoder.swift",
+      "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/Providers.swift",
+      "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/WebSocket/URLSessionWebSocketClient.swift",
+      "-I",
+      "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx11.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/EmotionCore.build/include/EmotionCore-Swift.h",
+      "-swift-version",
+      "6",
+      "-Xfrontend",
+      "-experimental-lazy-typecheck",
+      "-Xfrontend",
+      "-experimental-skip-all-function-bodies",
+      "-Xfrontend",
+      "-experimental-allow-module-with-compiler-errors",
+      "-Xfrontend",
+      "-empty-abi-descriptor",
+      "-I",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-L",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-plugin-path",
+      "/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "emotioncore",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "EmotionCore" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/EmotionCore.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/EmotionCoreManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/Encoders/AudioEncoder.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/Encoders/H264Encoder.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/Providers.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zoe/emora-AI/Swift/EmotionCore/Sources/EmotionCore/WebSocket/URLSessionWebSocketClient.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/EmotionCore.build/sources"
+    },
+    "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/zoe/emora-AI/Swift/EmotionCore/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+    }
+  }
+}

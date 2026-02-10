@@ -1,0 +1,27 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "emotioncore",
+          "kind" : "fileSystem",
+          "location" : "/Users/zoe/emora-AI/Swift/EmotionCore",
+          "name" : "EmotionCore"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Users/zoe/emora-AI/Swift/EmotionCore"
+        },
+        "subpath" : "emotioncore"
+      }
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

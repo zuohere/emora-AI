@@ -4,7 +4,8 @@ import PackageDescription
 let package = Package(
     name: "EmotionCore",
     platforms: [
-        .iOS(.v15)
+        .iOS(.v15),
+        .macOS(.v11)
     ],
     products: [
         .library(name: "EmotionCore", targets: ["EmotionCore"])
@@ -13,7 +14,6 @@ let package = Package(
         // optional dependencies can be added here
     ],
     targets: [
-        .target(name: "EmotionCore", path: "Sources/EmotionCore"),
-        .testTarget(name: "EmotionCoreTests", dependencies: ["EmotionCore"], path: "Tests")
+        .target(name: "EmotionCore", path: "Sources/EmotionCore")
     ]
 )

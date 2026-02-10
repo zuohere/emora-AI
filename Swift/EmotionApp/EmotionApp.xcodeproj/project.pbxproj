@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA0001010000000000000001 /* EmotionAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0001020000000000000001 /* EmotionAppApp.swift */; };
+		EA0001030000000000000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0001040000000000000001 /* ContentView.swift */; };
+		EA0001050000000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0001060000000000000001 /* Assets.xcassets */; };
+		EA0001110000000000000001 /* URLSessionWebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0001120000000000000001 /* URLSessionWebSocketClient.swift */; };
+		EA0001130000000000000001 /* CameraVideoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0001140000000000000001 /* CameraVideoProvider.swift */; };
+		EA0001150000000000000001 /* MicrophoneAudioProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0001160000000000000001 /* MicrophoneAudioProvider.swift */; };
+		EA0001170000000000000001 /* MetaWearablesDATAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0001180000000000000001 /* MetaWearablesDATAdapter.swift */; };
+		EA0001210000000000000001 /* EmotionCore in Frameworks */ = {isa = PBXBuildFile; productRef = EA0001200000000000000001 /* EmotionCore */; };
+		EA0001230000000000000001 /* EmotionUI in Frameworks */ = {isa = PBXBuildFile; productRef = EA0001220000000000000001 /* EmotionUI */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EA0000FF0000000000000001 /* EmotionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0001020000000000000001 /* EmotionAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionAppApp.swift; sourceTree = "<group>"; };
+		EA0001040000000000000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EA0001060000000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA0001120000000000000001 /* URLSessionWebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionWebSocketClient.swift; sourceTree = "<group>"; };
+		EA0001140000000000000001 /* CameraVideoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVideoProvider.swift; sourceTree = "<group>"; };
+		EA0001160000000000000001 /* MicrophoneAudioProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneAudioProvider.swift; sourceTree = "<group>"; };
+		EA0001180000000000000001 /* MetaWearablesDATAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaWearablesDATAdapter.swift; sourceTree = "<group>"; };
+		EA0001190000000000000001 /* EmotionCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = EmotionCore; path = ../EmotionCore; sourceTree = "<group>"; };
+		EA00011A0000000000000001 /* EmotionUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = EmotionUI; path = ../EmotionUI; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA0000FC0000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0001210000000000000001 /* EmotionCore in Frameworks */,
+				EA0001230000000000000001 /* EmotionUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA0000F60000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				EA0001010000000000000002 /* EmotionApp */,
+				EA0001100000000000000001 /* Adapters */,
+				EA00011B0000000000000001 /* Packages */,
+				EA0001000000000000000001 /* Products */,
+				EA00011F0000000000000001 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EA0001000000000000000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA0000FF0000000000000001 /* EmotionApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA0001010000000000000002 /* EmotionApp */ = {
+			isa = PBXGroup;
+			children = (
+				EA0001020000000000000001 /* EmotionAppApp.swift */,
+				EA0001040000000000000001 /* ContentView.swift */,
+				EA0001060000000000000001 /* Assets.xcassets */,
+			);
+			path = EmotionApp;
+			sourceTree = "<group>";
+		};
+		EA0001100000000000000001 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				EA0001120000000000000001 /* URLSessionWebSocketClient.swift */,
+				EA0001140000000000000001 /* CameraVideoProvider.swift */,
+				EA0001160000000000000001 /* MicrophoneAudioProvider.swift */,
+				EA0001180000000000000001 /* MetaWearablesDATAdapter.swift */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		EA00011B0000000000000001 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				EA0001190000000000000001 /* EmotionCore */,
+				EA00011A0000000000000001 /* EmotionUI */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		EA00011F0000000000000001 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA0000FE0000000000000001 /* EmotionApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA00010D0000000000000001 /* Build configuration list for PBXNativeTarget "EmotionApp" */;
+			buildPhases = (
+				EA0000FB0000000000000001 /* Sources */,
+				EA0000FC0000000000000001 /* Frameworks */,
+				EA0000FD0000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmotionApp;
+			packageProductDependencies = (
+				EA0001200000000000000001 /* EmotionCore */,
+				EA0001220000000000000001 /* EmotionUI */,
+			);
+			productName = EmotionApp;
+			productReference = EA0000FF0000000000000001 /* EmotionApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA0000F70000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					EA0000FE0000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = EA0000FA0000000000000001 /* Build configuration list for PBXProject "EmotionApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA0000F60000000000000001;
+			packageReferences = (
+			);
+			productRefGroup = EA0001000000000000000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA0000FE0000000000000001 /* EmotionApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA0000FD0000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0001050000000000000001 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA0000FB0000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0001030000000000000001 /* ContentView.swift in Sources */,
+				EA0001010000000000000001 /* EmotionAppApp.swift in Sources */,
+				EA0001110000000000000001 /* URLSessionWebSocketClient.swift in Sources */,
+				EA0001130000000000000001 /* CameraVideoProvider.swift in Sources */,
+				EA0001150000000000000001 /* MicrophoneAudioProvider.swift in Sources */,
+				EA0001170000000000000001 /* MetaWearablesDATAdapter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EA00010B0000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA00010C0000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA00010E0000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2UKGLRMV2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmotionApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "需要访问摄像头进行情绪分析";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要访问麦克风进行语音情绪分析";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emora.EmotionApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA00010F0000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V2UKGLRMV2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmotionApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "需要访问摄像头进行情绪分析";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要访问麦克风进行语音情绪分析";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emora.EmotionApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA0000FA0000000000000001 /* Build configuration list for PBXProject "EmotionApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA00010B0000000000000001 /* Debug */,
+				EA00010C0000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA00010D0000000000000001 /* Build configuration list for PBXNativeTarget "EmotionApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA00010E0000000000000001 /* Debug */,
+				EA00010F0000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA0001200000000000000001 /* EmotionCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = EmotionCore;
+		};
+		EA0001220000000000000001 /* EmotionUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = EmotionUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EA0000F70000000000000001 /* Project object */;
+}
